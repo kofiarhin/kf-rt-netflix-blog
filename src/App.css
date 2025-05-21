@@ -120,11 +120,29 @@ body {
 /* === Footer === */
 .footer {
   margin-top: 3rem;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   text-align: center;
   color: #aaaaaa;
   font-size: 0.9rem;
   border-top: 1px solid #333;
   width: 100%;
   box-sizing: border-box;
+}
+
+.social-icons {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+
+.social-icons a {
+  color: #bbbbbb;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
 }

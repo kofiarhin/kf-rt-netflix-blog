@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import movies from "./movies";
 import "./App.css";
+import MovieItem from "./components/MovieItem";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [selectedGenre, setSelectedGenre] = useState("All");
@@ -32,23 +34,11 @@ const App = () => {
 
       <div className="movies-grid">
         {filteredMovies.map((movie) => (
-          <div key={movie.title} className="movie-card">
-            <h2 className="movie-title">Title: {movie.title}</h2>
-            <p className="movie-genre">Genre: {movie.genre}</p>
-            <p className="movie-description">
-              Description: {movie.description}
-            </p>
-            <p className="movie-year">Year: {movie.year}</p>
-            <p className="movie-characters">
-              Main Characters: {movie.mainCharacters.join(", ")}
-            </p>
-          </div>
+          <MovieItem key={movie.title} movie={movie} />
         ))}
       </div>
 
-      <footer className="footer">
-        <p>Created by Kofi Arhin</p>
-      </footer>
+      <Footer />
     </div>
   );
 };
