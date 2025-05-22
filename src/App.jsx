@@ -1,8 +1,5 @@
-import React, { useState } from "react";
-import movies from "./movies";
-import "./App.css";
-import MovieItem from "./components/MovieItem";
-import Footer from "./components/Footer";
+import React, { useState, useEffect } from "react";
+// your other imports
 
 const App = () => {
   const [selectedGenre, setSelectedGenre] = useState("All");
@@ -13,6 +10,28 @@ const App = () => {
     selectedGenre === "All"
       ? movies
       : movies.filter((movie) => movie.genre === selectedGenre);
+
+  // 👇 Add this effect to handle animation on scroll
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries, observerInstance) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+            observerInstance.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    const cards = document.querySelectorAll(".movie-card");
+    cards.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, [filteredMovies]);
 
   return (
     <div className="app-container">
@@ -42,5 +61,3 @@ const App = () => {
     </div>
   );
 };
-
-export default App;
