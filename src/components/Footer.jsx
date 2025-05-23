@@ -13,16 +13,24 @@ const Footer = () => {
           <FaFacebook />
         </a>
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/escodebar/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaInstagram />
         </a>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://x.com/kwofiArhin"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaTwitter />
         </a>
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/kofiarhin"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaGithub />
         </a>
       </div>
