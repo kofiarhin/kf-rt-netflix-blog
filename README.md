@@ -2,10 +2,6 @@
 
 A responsive React app that displays a list of movies (based on Netflix titles), allowing users to filter by genre using a full-width dropdown. The design follows a clean dark theme and mobile-first responsive layout.
 
-## Live Demo
-
-[Click here to view the live app](https://kf-rt-netflix-blog.vercel.app/)
-
 ## Features
 
 - Dark mode interface
@@ -17,3 +13,7 @@ A responsive React app that displays a list of movies (based on Netflix titles),
 
 - React
 - CSS (custom, mobile-first, no frameworks)
+
+## Live Demo
+
+[Click here to view the live app](https://kf-rt-netflix-blog.vercel.app/)
